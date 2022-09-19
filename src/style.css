@@ -1,0 +1,76 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.nav-list {
+  display: flex;
+  gap: 100px;
+  place-content: center;
+}
+
+.nav-list button {
+  font-size: 26px;
+  background-color: #1f1f1f;
+  color: white;
+  border: none;
+  padding: 20px 20px;
+}
+
+.hero-container {
+  background-color: aqua;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  gap: 20px;
+}
+
+.menu-container {
+  padding: 40px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+}
+.menu-item {
+  border: 1px solid #1f1f1f;
+  border-radius: 14px;
+  padding: 10px;
+  background-color: bisque;
+}
