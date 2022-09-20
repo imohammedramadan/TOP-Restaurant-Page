@@ -1,8 +1,9 @@
 import "./style.css";
-import headerComponent from "./header.js";
-import mainComponent from "./home.js";
-import menuComponent from "./menu";
-// import menuComponent from "./menu.js";
+import headerComponent from "./components/header/header.js";
+import mainComponent from "./components/home/home.js";
+import menuComponent from "./components/menu/menu.js";
+import contactComponent from "./components/contact/contact.js";
+
 document.body.appendChild(document.createElement("header"));
 const header = document.querySelector("header");
 
@@ -12,24 +13,33 @@ document.body
 
 const content = document.getElementById("content");
 
-headerComponent(header);
-mainComponent(content);
+window.addEventListener("DOMContentLoaded", () => {
+  headerComponent(header);
+  mainComponent(content);
+  handleTabChange();
+});
 
 function handleTabChange() {
   const headerBtns = document.querySelector(".nav-list");
 
   headerBtns.addEventListener("click", (e) => {
-    if (e.target.classList.value === "menu-btn") {
+    if (e.target.classList[1] === "menu-btn") {
       content.innerHTML = "";
       menuComponent(content);
-    } else if (e.target.classList.value === "contact-btn") {
+    } else if (e.target.classList[1] === "contact-btn") {
+      content.innerHTML = "";
       contactComponent(content);
-    } else if (e.target.classList.value === "home-btn") {
+    } else if (e.target.classList[1] === "home-btn") {
       content.innerHTML = "";
       mainComponent(content);
     }
-    console.log(e.target.parentNode.parentNode);
+    handleTabStyle(e.target.classList);
   });
 }
 
-handleTabChange();
+function handleTabStyle(targetClass) {
+  const activeTab = document.querySelector(".active-tab");
+
+  if (activeTab) activeTab.classList.remove("active-tab");
+  targetClass.add("active-tab");
+}

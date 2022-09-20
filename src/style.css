@@ -1,3 +1,11 @@
+:root {
+  --dark: #121212;
+  --blue-300: #053742;
+  --blue-200: #39a2db;
+  --blue-100: #a2dbfa;
+  --font-color: #ffffff;
+}
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -7,6 +15,8 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--font-color);
 }
 
 body,
@@ -34,43 +44,6 @@ img {
   height: auto;
 }
 
-.nav-list {
-  display: flex;
-  gap: 100px;
-  place-content: center;
-}
-
-.nav-list button {
-  font-size: 26px;
-  background-color: #1f1f1f;
-  color: white;
-  border: none;
-  padding: 20px 20px;
-}
-
-.hero-container {
-  background-color: aqua;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  place-items: center;
-  gap: 20px;
-}
-
-.menu-container {
-  padding: 40px;
-  display: flex;
-  place-content: center;
-  place-items: center;
-}
-.menu-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 100px;
-}
-.menu-item {
-  border: 1px solid #1f1f1f;
-  border-radius: 14px;
-  padding: 10px;
-  background-color: bisque;
+body {
+  background-color: var(--dark);
 }

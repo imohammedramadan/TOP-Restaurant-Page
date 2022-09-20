@@ -1,0 +1,22 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+
+  place-items: center;
+  padding-top: 40px;
+  gap: 40px;
+  text-align: center;
+}
+.call-container,
+.address-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-container h2 {
+  font-size: 50px;
+}
+
+.contact-container p {
+  font-size: 30px;
+}

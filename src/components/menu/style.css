@@ -1,0 +1,35 @@
+.menu-container {
+  padding: 40px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 100px;
+}
+
+.menu-item {
+  border: 1px solid var(--blue-200);
+  border-radius: 14px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  place-content: center;
+  gap: 10px;
+}
+.item-title h2 {
+  font-size: 40px;
+}
+
+.item-price p {
+  font-size: 24px;
+}
+
+.item-img img {
+  height: 200px;
+  width: auto;
+}
