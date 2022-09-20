@@ -5,6 +5,7 @@ import menuComponent from "./components/menu/menu.js";
 import contactComponent from "./components/contact/contact.js";
 
 document.body.appendChild(document.createElement("header"));
+
 const header = document.querySelector("header");
 
 document.body
@@ -23,13 +24,13 @@ function handleTabChange() {
   const headerBtns = document.querySelector(".nav-list");
 
   headerBtns.addEventListener("click", (e) => {
-    if (e.target.classList[1] === "menu-btn") {
+    if (e.target.classList.contains("menu-btn")) {
       content.innerHTML = "";
       menuComponent(content);
-    } else if (e.target.classList[1] === "contact-btn") {
+    } else if (e.target.classList.contains("contact-btn")) {
       content.innerHTML = "";
       contactComponent(content);
-    } else if (e.target.classList[1] === "home-btn") {
+    } else if (e.target.classList.contains("home-btn")) {
       content.innerHTML = "";
       mainComponent(content);
     }
