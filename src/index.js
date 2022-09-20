@@ -44,3 +44,4 @@ function handleTabStyle(targetClass) {
   if (activeTab) activeTab.classList.remove("active-tab");
   targetClass.add("active-tab");
 }
+console.log("Hi Bebo! <3");
