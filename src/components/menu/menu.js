@@ -1,5 +1,5 @@
 import "./style.css";
-import pizzaImg from "./assets/pizza.jpeg";
+import pizzaImg from "./assets/pizza.jpg";
 import pizzaRollsImg from "./assets/pizza-rolls.jpg";
 import omeletteImg from "./assets/special-omelette.jpg";
 import burgerImg from "./assets/egyptian-style-burger.jpg";
