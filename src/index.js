@@ -42,6 +42,6 @@ function handleTabStyle(targetClass) {
   const activeTab = document.querySelector(".active-tab");
 
   if (activeTab) activeTab.classList.remove("active-tab");
-  targetClass.add("active-tab");
+  if (targetClass.classList.contains("nav-btn")) targetClass.add("active-tab");
 }
 console.log("Hi Bebo! <3");
